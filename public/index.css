@@ -1,0 +1,56 @@
+html, body {
+	margin: 0;
+	padding: 0;
+}
+
+*, *::before, *::after {
+	min-width: 0;
+	min-height: 0;
+	box-sizing: border-box;
+}
+
+.video {
+	display: inline-flex;
+	position: relative;
+}
+
+video {
+	display: block;
+	max-width: 100%;
+	width: 100%;
+	margin: 0 auto;
+	height: auto;
+	max-height: 100%;
+}
+
+.frame {
+	pointer-events: none;
+	border-width: var(--frame--border-width, 4px);
+	border-color: var(--frame--border-color, green);
+	border-style: var(--frame--border-style, solid);
+	position: absolute;
+	z-index: 1;
+}
+
+.overflow {
+	overflow: auto;
+}
+
+main {
+	display: flex;
+	align-items: flex-start;
+}
+
+.responsive {
+	display: flex;
+	flex: 0 1 auto;
+	margin: 0 auto;
+}
+
+.analytic-events {
+	flex: 1 0 auto;
+	min-width: 160px;
+	margin: 0 0 0 1rem;
+	padding: 1rem 0;
+	max-height: 100vh;
+}
